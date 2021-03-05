@@ -50,7 +50,7 @@ void main() {
 
     test('make get request', () async {
       var client = http.NodeClient();
-      var response = await client.get('http://127.0.0.1:8181/test');
+      var response = await client.get(Uri.parse('http://127.0.0.1:8181/test'));
       expect(response.statusCode, 200);
       expect(response.contentLength, greaterThan(0));
       expect(response.body, equals('ok'));
@@ -63,7 +63,7 @@ void main() {
     test('make post request with a body', () async {
       var client = http.NodeClient();
       var response =
-          await client.post('http://127.0.0.1:8181/test', body: 'hello');
+          await client.post(Uri.parse('http://127.0.0.1:8181/test'), body: 'hello');
       expect(response.statusCode, 200);
       expect(response.contentLength, greaterThan(0));
       expect(response.body, equals('hello'));
@@ -82,7 +82,7 @@ void main() {
 
     test('follows redirects', () async {
       var client = http.NodeClient();
-      var response = await client.get('http://127.0.0.1:8181/redirect-to-test');
+      var response = await client.get(Uri.parse('http://127.0.0.1:8181/redirect-to-test'));
       expect(response.statusCode, 200);
       expect(response.contentLength, greaterThan(0));
       expect(response.body, equals('ok'));
@@ -93,7 +93,8 @@ void main() {
       var client = http.NodeClient();
       var error;
       try {
-        await client.get('http://127.0.0.1:8181/redirect-loop');
+        ;
+        await client.get(Uri.parse('http://127.0.0.1:8181/redirect-loop'));
       } catch (err) {
         error = err;
       }
