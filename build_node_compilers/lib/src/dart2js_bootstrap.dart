@@ -66,6 +66,7 @@ https://github.com/dart-lang/build/blob/master/docs/faq.md#how-can-i-resolve-ski
       ]);
   }
 
+  // ignore: deprecated_member_use
   var dart2js = await buildStep.fetchResource(dart2JsWorkerResource);
   var result = await dart2js.compile(args);
   var jsOutputId = dartEntrypointId.changeExtension(jsEntrypointExtension);

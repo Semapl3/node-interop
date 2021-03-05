@@ -19,7 +19,7 @@ void main() {
         buffer.writeln('after');
       }
 
-      await writesToBuffer(buffer);
+      writesToBuffer(buffer);
       expect(buffer.toString(), 'before\nhello world\nafter\n');
     });
   });

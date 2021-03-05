@@ -1,6 +1,7 @@
 name: e2e_interop_test
 description: End-to-end test for node interop and builders
 version: 0.0.1
+publish_to: none
 
 environment:
   sdk: '>=2.4.0 <3.0.0'
@@ -10,7 +11,7 @@ dependencies:
     path: ../node_interop
 
 dev_dependencies:
-  test: ^1.0.0
-  build_runner: ^1.0.0
+  test: ^1.16.5
+  build_runner: 1.11.5
   build_node_compilers:
     path: ../build_node_compilers
