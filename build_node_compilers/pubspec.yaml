@@ -10,7 +10,7 @@ environment:
 dependencies:
   analyzer: ^0.41.2
   bazel_worker: ^0.1.25
-  collection: ^1.14.13
+  collection: 1.14.13
   crypto: ^2.1.5
   build_modules: ^3.0.2
   meta: 1.2.3
