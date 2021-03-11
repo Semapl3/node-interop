@@ -14,4 +14,6 @@ dev_dependencies:
   test: ^1.16.5
   build_runner: 1.11.5
   build_node_compilers:
-    path: ../build_node_compilers
+    git:
+      url: git://github.com/Semapl3/firebase-functions-interop
+      path: build_node_compilers
